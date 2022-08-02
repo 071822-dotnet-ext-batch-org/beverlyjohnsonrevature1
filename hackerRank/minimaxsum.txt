@@ -1,0 +1,8 @@
+public static void miniMaxSum(List<int> arr)
+    {
+        Array.Sort(arr);
+        long min = arr.Take(4).Sum(item => (long) item);
+        long max = arr.Skip(1).Sum(item => (long) item);
+        
+        Console.WriteLine($"The mini sum is {min}, and the          max sum is {max}.")
+    }
