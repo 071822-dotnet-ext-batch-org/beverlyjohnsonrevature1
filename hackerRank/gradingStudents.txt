@@ -1,0 +1,24 @@
+ public static List<int> gradingStudents(List<int> grades)
+    {
+
+	int[] grades = {4, 73, 67, 38, 33};
+
+        	for (int i = 0; i < grades.Length; i++){
+            		if(grades[i] >= 38){
+                
+                 		if(grades[i] % 5 == 3){
+                     		grades[i] += 2;
+                 		}
+                	 	else if (grades[i] % 5 == 4){
+                     		grades[i] += 1;
+                		}
+
+                		if (grades[i] % 5 > 2){
+                    		grades[i] += 5 - (grades[i] % 5);
+                		}
+			}
+        	}
+
+        for (int i = 0; i < grades.Length; i++){
+            Console.WriteLine(grades[i]);
+	}
