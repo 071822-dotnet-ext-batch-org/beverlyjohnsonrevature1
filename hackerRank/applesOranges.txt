@@ -1,0 +1,17 @@
+{
+        int apple = 0;
+        int orange = 0;
+        foreach(int app in apples)
+        {
+            if app+a>=s && app+<=t
+                apple++;
+        }
+        Console.WriteLine(apple);
+        
+        foreach(int org in oranges)
+        {
+            if (org+b>=s && org+b<+=t)
+                orange++;
+        }
+        Console.WriteLine(orange);
+    }
