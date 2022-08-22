@@ -1,0 +1,30 @@
+class Solution {
+
+    static void Main(String[] args) {
+            Console.ReadLine();
+            var a_temp = Console.ReadLine().Split(' ');
+            var a = Array.ConvertAll(a_temp, Int32.Parse);
+            var maxCount = 0;
+            var sortedList = a.OrderBy(x => x).ToList();
+
+            for (int i = 0; i < sortedList.Count; i++)
+            {
+                var currentCount = 1;
+                if (i > 0)
+                    if (sortedList[i] == sortedList[i-1])
+                        continue;
+
+                for (int j = i+1; j < sortedList.Count; j++)
+                {
+                    if (Math.Abs(sortedList[j]-sortedList[i]) <=1)
+                        currentCount++;
+                    else
+                        break;
+                }
+
+                if (currentCount > maxCount)
+                    maxCount = currentCount;
+            }
+            Console.WriteLine(maxCount);
+    }
+}
